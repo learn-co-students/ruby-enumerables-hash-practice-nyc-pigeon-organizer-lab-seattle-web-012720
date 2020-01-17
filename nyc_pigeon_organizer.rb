@@ -3,7 +3,7 @@ def nyc_pigeon_organizer(data)
  
   pigeons = {}
   data.reduce({}) do |memo, (key, value)|
-    array = value.reduce({}) do |memo2, (key2,value2)|
+    value.reduce({}) do |memo2, (key2,value2)|
       value2.each{|n| 
         if(pigeons[n])
           if(pigeons[n][key].include?(key2.to_s) != true)
