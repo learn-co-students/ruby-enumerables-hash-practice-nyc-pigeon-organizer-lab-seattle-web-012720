@@ -6,7 +6,7 @@ def nyc_pigeon_organizer(data)
     array = value.reduce({}) do |memo2, (key2,value2)|
       value2.each{|n| 
         if(pigeons[n])
-          if(pigeons[n][key].include?(key2) != true)
+          if(pigeons[n][key].include?(key2.to_s) != true)
             pigeons[n][key.to_sym].push(key2.to_s)
           end
         else
